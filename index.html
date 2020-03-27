@@ -11,7 +11,7 @@
     <div class="container">
       
       <div id="intro">
-        <h1>Hello, and welcome to this programming language selector. </h1>
+        <h1>Hello, and welcome to this programming language suggestor. </h1>
         <h3>Fill out this short survey, and I will suggest to you good programming languages for you to learn.</h3>
         <h4>Please bear in mind that the range of languages this survey will suggest is not comprehensive. Possibilities are:</h4>
         <ul>
@@ -29,11 +29,23 @@
    
       <form id="survey">
         <div>
-          <p>First Question: (construction important/not important)</p>
-          <input type="radio" name="q1" value="">
-          <input type="radio" name="q1" value="">
+          <p>
+            First Question:<br>One of the major formative questions behind the construction of computer languages
+            is "how much do I want this language to guess at what I'm trying to do, and do it for me?"<br>
+            And the truth is, it can be problematic both ways. For example, take 'Garbage Collection' 
+          </p>
+          <p>
+            Garbage Collection is the term for a language that manages memory for you;
+            while this can be extraordinarily helpful (you don't have to think about memory address acquisition
+            and release) it can also be equally problematic: you may find that sometimes the language "guesses wrong"
+            about when you want to "forget" a variable, which can be difficult to diagnose/work around.
+          </p>
+          <p>Therefore, would you prefer that your language DOES try to be your 'personal assistant':</p>
+          <input type="radio" name="q1" value="yes">
+          <p>Or do you prefer that it DOES NOT, and you must assign/manage everything personally/manually?</p>
+          <input type="radio" name="q1" value="no">
         </div>
-        
+
         <div>
           <p>Second Question: (construction important/not important)</p>
           <input type="radio" name="q2" value="">

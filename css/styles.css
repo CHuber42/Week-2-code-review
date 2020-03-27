@@ -1,4 +1,9 @@
 html, body, .container {
   height: 99%;
+  border: 1px solid blue;
+ 
 }
 
+div {
+  border: 1px solid purple;
+}
