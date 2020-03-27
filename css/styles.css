@@ -1,0 +1,12 @@
+html, body, .container {
+  height: 99%;
+}
+
+#eighteen-plus {
+  display: none;
+}
+
+#eighteen-minus {
+  display: none;
+}
+
