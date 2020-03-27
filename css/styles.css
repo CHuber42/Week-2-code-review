@@ -12,16 +12,23 @@ h4 {
   font-weight: 900;
 }
 
-li {
+#languages li {
   float: left;  
-  margin-left: 8%;
+  margin-left: 9%;
 }
 
 .floatMid {
   text-align: center;
 }
 
+#results-presentation {
+  text-align: center;
+  font-weight: 900;
+}
 
-#results-container span {
+#results-container li{
   float: left;
+  margin-left: 18%;
+  font-weight: 600;
+  font-size: x-large;
 }

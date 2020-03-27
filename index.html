@@ -28,7 +28,7 @@
         <br><br>
         <p class="floatMid"><em>Let's Begin</em></p>  
       <form id="survey">
-        <div id="firstpage">
+        <div class="quizpage">
           <div>
             <h4>First Question:</h4>
             <p>
@@ -71,7 +71,7 @@
           </div>
         </div>
         
-        <div id="secondpage" class="hidden">
+        <div class="quizpage hidden">
           <div>
             <h4>Fourth Question:</h4>
             <p>
@@ -110,16 +110,18 @@
         </div>
       </form>
 
+      <button class="pagebutton">2nd Page</button>
+      <button class="pagebutton hidden">1st Page</button>
+    
+
       <div>
-        <p>
-          <ul id="results-container"><span>I suggest you learn these languages:</span></ul>
-        </p>
+        <p id="results-presentation">I suggest you learn these languages:</p>
+          <ul id="results-container">
+          </ul>      
       </div>
 
     </div>
     
-    <button class="pagebutton">2nd Page</button>
-    <button class="pagebutton">1st Page</button>
     
   </body>
 </html>

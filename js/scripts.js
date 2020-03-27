@@ -138,4 +138,8 @@ $(document).ready(function(){
 
  });
 
+ $(".pagebutton").click(function(){
+  $(".pagebutton, .quizpage").toggleClass("hidden");
+ });
+
 });
