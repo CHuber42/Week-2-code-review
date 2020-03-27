@@ -1,3 +1,8 @@
+//Input: array of numeric variables (In this case, each language's weight-value)
+//Output: array of length 3, populated with the indeces of the 3 highest values (weights)
+//First-in-array wins tiebreakers.
+//Please note: Currently the highest possible value is Six (because six choices each granting max weight of 1)
+//But if implementing differently, grab highestValue dynamically using a "= Math.max(array)" sub-function.
 function pushResults(arrayHandler){
   var resultsDestination = [];
   var highestValue = 6;
@@ -17,6 +22,8 @@ function pushResults(arrayHandler){
 return resultsDestination;
 }
 
+//Input: array of length 3 (ints) representing the indeces (languages) that were most heavily weighted
+//output: list items appended into the results list div 
 function publishResults(resultsArray) {
   for (i = 0; i < 3; i++) {
     switch (resultsArray[i]) {
@@ -42,18 +49,25 @@ function publishResults(resultsArray) {
       $("#results-container").append('<li>Rust</li>');
       continue;
     }
-
   }
 }
 
+//Wipe results list if present (non-first submit detected)
+function clearResults() {
+  document.getElementById("results-container").innerHTML = "";
+}
 
 
 $(document).ready(function(){
  $("form#survey").submit(function(event) {
   event.preventDefault();
   $("#results-presentation").removeClass("hidden");
+ 
+  //If this is not the 1st time clicking 'show me results',
+  //remove the old results
+  clearResults();
 
-  //Create counters to quantify an item's popularity
+  //Create (or reset) counters to quantify an item's popularity
   var python = 0;
   var ruby = 0;
   var csharp = 0;
@@ -143,19 +157,17 @@ $(document).ready(function(){
     go += 1;
   }
 
-  //Below here, we create the equivalent of a dict.
-  //First we create an array to correlate language:dictionary:weighting in selection
+  //Create the equivalent of a dict where language = index | language's weight = index's value  
   var resultsArray = [python, ruby, csharp, swift, javascript, go, rust];
-  //Then we call the function @ top to grab these **indeces** with the highest weight, and store them in an array.
-  //-Emphasis: Not the weights; the indeces with the highest weights!-
-  var trueResults = pushResults(resultsArray);
+  
+  //See bottom-of-page for uncompressed version
+  publishResults(pushResults(resultsArray));
 
- 
-  //Now back-translate the array of indeces into their respective languages,
-  //and append the corresponding language to the results <ul> as an <li>
-  publishResults(trueResults);
+
+
  });
-
+ 
+ //Toggle which quiz page (div) is visible
  $(".pagebutton").click(function(){
   $(".pagebutton, .quizpage").toggleClass("hidden");
  });
@@ -163,18 +175,9 @@ $(document).ready(function(){
 });
 
 
+  //Then call that grabs the 3 **indeces** with the highest weight into an array.
+  //-Emphasis: Not the weights; the indeces with the highest weights!-
+  //var trueResults = pushResults(resultsArray);
 
-
-
-
-
-while (trueResults.length < 3) {
-  for (i = 0; i < resultsArray.length; i++) {
-    if ((resultsArray[i] === highestValue) && (trueResults.length < 3)) {
-      trueResults.push(i);
-   
-    }
-
-  }    
-  highestValue -= 1;
-}
+  
+  //Pass the above array of indeces to a reverse-translator + publisher.
