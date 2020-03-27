@@ -28,25 +28,25 @@ function publishResults(resultsArray) {
   for (i = 0; i < 3; i++) {
     switch (resultsArray[i]) {
       case 0:
-      $("#results-container").append('<li>Python</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></li>');
       continue;
       case 1:
-      $("#results-container").append('<li>Ruby</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</li>');
       continue;
       case 2:
-      $("#results-container").append('<li>C#</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</li>');
       continue;
       case 3:
-      $("#results-container").append('<li>Swift</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/Swift_(programming_language)">Swift</li>');
       continue;
       case 4:
-      $("#results-container").append('<li>JavaScript</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</li>');
       continue;
       case 5:
-      $("#results-container").append('<li>Go</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/Go_(programming_language)">Go</a></li>');
       continue;
       case 6: 
-      $("#results-container").append('<li>Rust</li>');
+      $("#results-container").append('<li><a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">Rust</a></li>');
       continue;
     }
   }

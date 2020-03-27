@@ -4,7 +4,9 @@ html, body, .container {
   color: black;  
 }
 
-
+h1, h3 {
+  text-align: center;
+}
 
 h4 {
   font-weight: 900;
@@ -29,4 +31,8 @@ h4 {
   margin-left: 18%;
   font-weight: 600;
   font-size: x-large;
+}
+
+.btn {
+  background-color:rgb(200,200,200);
 }
