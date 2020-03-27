@@ -17,6 +17,34 @@ function pushResults(arrayHandler){
 return resultsDestination;
 }
 
+function publishResults(resultsArray) {
+  for (i = 0; i < 3; i++) {
+    switch (resultsArray[i]) {
+      case 0:
+      $("#results-container").append('<li>Python</li>');
+      continue;
+      case 1:
+      $("#results-container").append('<li>Ruby</li>');
+      continue;
+      case 2:
+      $("#results-container").append('<li>C#</li>');
+      continue;
+      case 3:
+      $("#results-container").append('<li>Swift</li>');
+      continue;
+      case 4:
+      $("#results-container").append('<li>JavaScript</li>');
+      continue;
+      case 5:
+      $("#results-container").append('<li>Go</li>');
+      continue;
+      case 6: 
+      $("#results-container").append('<li>Rust</li>');
+      continue;
+    }
+
+  }
+}
 
 
 
@@ -25,6 +53,7 @@ $(document).ready(function(){
   event.preventDefault();
   $("#results-presentation").removeClass("hidden");
 
+  //Create counters to quantify an item's popularity
   var python = 0;
   var ruby = 0;
   var csharp = 0;
@@ -33,6 +62,9 @@ $(document).ready(function(){
   var go = 0;
   var rust = 0;
 
+  //The below if/else if functions are the processors for each entry;
+  //depending on the selection, it adds 1 to the given language's 
+  //selection weight.
   var q1answer = $("input:radio[name=q1]:checked").val(); 
   if (q1answer === "a"){
     csharp += 1;
@@ -111,44 +143,17 @@ $(document).ready(function(){
     go += 1;
   }
 
-  
-
+  //Below here, we create the equivalent of a dict.
+  //First we create an array to correlate language:dictionary:weighting in selection
   var resultsArray = [python, ruby, csharp, swift, javascript, go, rust];
+  //Then we call the function @ top to grab these **indeces** with the highest weight, and store them in an array.
+  //-Emphasis: Not the weights; the indeces with the highest weights!-
   var trueResults = pushResults(resultsArray);
 
-
-
-  
-
-  for (i = 0; i < 3; i++) {
-    switch (trueResults[i]) {
-      case 0:
-      $("#results-container").append('<li>Python</li>');
-      continue;
-      case 1:
-      $("#results-container").append('<li>Ruby</li>');
-      continue;
-      case 2:
-      $("#results-container").append('<li>C#</li>');
-      continue;
-      case 3:
-      $("#results-container").append('<li>Swift</li>');
-      continue;
-      case 4:
-      $("#results-container").append('<li>JavaScript</li>');
-      continue;
-      case 5:
-      $("#results-container").append('<li>Go</li>');
-      continue;
-      case 6: 
-      $("#results-container").append('<li>Rust</li>');
-      continue;
-    }
-
-    
-  }
-  
-
+ 
+  //Now back-translate the array of indeces into their respective languages,
+  //and append the corresponding language to the results <ul> as an <li>
+  publishResults(trueResults);
  });
 
  $(".pagebutton").click(function(){

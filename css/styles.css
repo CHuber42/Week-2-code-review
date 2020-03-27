@@ -1,12 +1,10 @@
 html, body, .container {
   height: 99%;
-  border: 1px solid blue;
- 
+  background-color: silver;
+  color: black;  
 }
 
-div {
-  border: 1px solid purple;
-}
+
 
 h4 {
   font-weight: 900;
