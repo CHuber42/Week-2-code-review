@@ -11,3 +11,12 @@ div {
 h4 {
   font-weight: 900;
 }
+
+li {
+  float: left;  
+  margin-left: 8%;
+}
+
+.floatMid {
+  text-align: center;
+}

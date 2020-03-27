@@ -17,12 +17,14 @@ $(document).ready(function(){
    var q5answer = $("input:radio[name=q5]:checked").val();
    var q6answer = $("input:radio[name=q6]:checked").val();
   
-   console.log(q1answer, q2answer, q3answer, q4answer, q5answer, q6answer);
+   
 
    var resultsArray = [python, ruby, csharp, swift, javascript, go, rust];
    var resultsCounter = 0;
    var highestValue = 6;
    var trueResults = [];
+
+   console.log(resultsArray);
 
    while (resultsCounter > 3) {
      for (i = 0; i < resultsArray.length; i++) {

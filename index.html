@@ -14,7 +14,7 @@
         <h1>Hello, and welcome to this programming language suggestor. </h1>
         <h3>Fill out this short survey, and I will suggest to you good programming languages for you to learn.</h3>
         <h4>Please bear in mind that the range of languages this survey will suggest is not comprehensive. Possibilities are:</h4>
-        <ul>
+        <ul id="languages">
           <li>Ruby</li>
           <li>C#</li>
           <li>JavaScript</li>
@@ -23,10 +23,10 @@
           <li>Rust</li>
           <li>Swift</li>
         </ul>
+      </div>
       <div>
-        
-      <span>Let's Begin.</span>
-   
+        <br><br>
+        <p class="floatMid"><em>Let's Begin</em></p>  
       <form id="survey">
         
         <div>
@@ -85,14 +85,22 @@
         </div>
        
         <div>
-          <p>Fifth Question: (construction important/not important)</p>
+          <h4>Fifth Question:</h4>
+          <p>Imagine you are managing a workshop. Which sounds more orderly?</p>
+          <p>At the beginning of the day, every employee makes a copy of every tool and takes it back to their workbench?</p>
           <input type="radio" name="q5" value="a">
+          <p>
+            <strong>OR</strong> each tool has its place, and employees move from station to station?<br>
+            Note: for this question, assume no space conflicts; infinite employees can use the same station at a time.
+            </p>
           <input type="radio" name="q5" value="b">
         </div>
        
         <div>
-          <p>Last Question: (construction important/not important)</p>
+          <h4>Last Question:</h4>
+          <p><strong>Flight?</strong></p>
           <input type="radio" name="q6" value="a">
+          <p>or <strong>Invisibility</strong>?</p>
           <input type="radio" name="q6" value="b">
         </div>
        
