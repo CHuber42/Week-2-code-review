@@ -103,29 +103,38 @@ $(document).ready(function(){
      
       }
 
-    }
-    
+    }    
     highestValue -= 1;
   }
   console.log(trueResults);
   for (i = 0; i < 3; i++) {
     switch (trueResults[i]) {
-      case "0":
-        "Python";
-      case "1":
-        "Ruby";
-      case "2":
-        "C#";
-      case "3":
-        "Swift";
-      case "4":
-        "JavaScript";
-      case "5":
-        "Go";
-      case "6": 
-        "Rust";
+      case 0:
+      $("#results-container").append('<li>Python</li>');
+      continue;
+      case 1:
+      $("#results-container").append('<li>Ruby</li>');
+      continue;
+      case 2:
+      $("#results-container").append('<li>C#</li>');
+      continue;
+      case 3:
+      $("#results-container").append('<li>Swift</li>');
+      continue;
+      case 4:
+      $("#results-container").append('<li>JavaScript</li>');
+      continue;
+      case 5:
+      $("#results-container").append('<li>Go</li>');
+      continue;
+      case 6: 
+      $("#results-container").append('<li>Rust</li>');
+      continue;
     }
+
+    
   }
+  
 
  });
 

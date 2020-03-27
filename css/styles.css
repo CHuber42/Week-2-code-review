@@ -20,3 +20,7 @@ li {
 .floatMid {
   text-align: center;
 }
+
+#results-container {
+  border: 1px solid purple;
+}
