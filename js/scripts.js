@@ -98,9 +98,8 @@ $(document).ready(function(){
 
   while (trueResults.length < 3) {
     for (i = 0; i < resultsArray.length; i++) {
-      alert("entered for loop, i = " + i + " resultsarray[i] = " + resultsArray[i] + " highestvalue = " + highestValue);
       if ((resultsArray[i] === highestValue) && (trueResults.length < 3)) {
-      trueResults.push(i);
+        trueResults.push(i);
      
       }
 
@@ -108,8 +107,25 @@ $(document).ready(function(){
     
     highestValue -= 1;
   }
-  
-  
+  console.log(trueResults);
+  for (i = 0; i < 3; i++) {
+    switch (trueResults[i]) {
+      case "0":
+        "Python";
+      case "1":
+        "Ruby";
+      case "2":
+        "C#";
+      case "3":
+        "Swift";
+      case "4":
+        "JavaScript";
+      case "5":
+        "Go";
+      case "6": 
+        "Rust";
+    }
+  }
 
  });
 
