@@ -28,83 +28,86 @@
         <br><br>
         <p class="floatMid"><em>Let's Begin</em></p>  
       <form id="survey">
-        
-        <div>
-          <h4>First Question:</h4>
-          <p>
-            Are you learning (a) programming language(s) for <strong>PERSONAL</strong> reasons, in order to build things
-            for your own personal use? 
-          </p>
-          <input type="radio" name="q1" value="a">
-          <p><strong>OR</strong> are you trying to be <strong>MORE PROFESSIONALLY COMPETITIVE</strong> by learning extra "in-demand" languages?</p>
-          <input type="radio" name="q1" value="b">
-        </div>
-
-        <div>
-          <h4>Second Question</h4>
-          <p>
-            Which do you enjoy more?<br>
-            Building awesome devices and machines that may only be impressive to "the initiated" (like a perfectly tuned car engine)?
-           </p>
-          <input type="radio" name="q2" value="a">
-          <p><strong>OR</strong> do you prefer things with "wow factor" (as in an awesome car chasis + paint job)?</p>
-          <input type="radio" name="q2" value="b">
-        </div>
-                  
-        <div>
-          <h4>Third Question:</h4>
-          <p>
-            One of the major formative questions behind the construction of computer languages
-            is "how much do I want this language to guess at what I'm trying to do, and do it for me?"<br>
-            And the truth is, it can be problematic both ways. For example, take 'Garbage Collection' 
-          </p>
-          <p>
-            Garbage Collection is the term for a language that manages memory for you;
-            while this can be extraordinarily helpful (you don't have to think about memory address acquisition
-            and release) it can also be equally problematic: you may find that sometimes the language "guesses wrong"
-            about when you want to "forget" a variable, which can be difficult to diagnose/work around.
-          </p>
-          <p>Therefore, would you prefer that your language <strong>DOES</strong> try to be your 'personal assistant':</p>
-          <input type="radio" name="q3" value="a">
-          <p>Or do you prefer that it <strong>DOES NOT</strong>, and you must assign/manage everything personally/manually?</p>
-          <input type="radio" name="q3" value="b">
-        </div>
-       
-        <div>
-          <h4>Fourth Question:</h4>
-          <p>
-            Learning/Implementation style. We will use furniture as an example for this one.<br>
-            Would you prefer: <br><strong>IKEA style</strong> furniture, where you are given exactly the pieces
-            and tools you need to build something specific?
-          </p>
-          <input type="radio" name="q4" value="a">
-          <p><strong>OR</strong> do you prefer designing your own furniture, <strong>and then</strong>
-            having to figure out how to build it with the tools at your disposal? (Or possibly even build/acquire new tools?)
-          </p>          
-          <input type="radio" name="q4" value="b">
-        </div>
-       
-        <div>
-          <h4>Fifth Question:</h4>
-          <p>Imagine you are managing a workshop. Which sounds more orderly?</p>
-          <p>At the beginning of the day, every employee makes a copy of every tool and takes it back to their workbench?</p>
-          <input type="radio" name="q5" value="a">
-          <p>
-            <strong>OR</strong> each tool has its place, and employees move from station to station?<br>
-            Note: for this question, assume no space conflicts; infinite employees can use the same station at a time.
+        <div id="firstpage">
+          <div>
+            <h4>First Question:</h4>
+            <p>
+              Are you learning (a) programming language(s) for <strong>PERSONAL</strong> reasons, in order to build things
+              for your own personal use? 
             </p>
-          <input type="radio" name="q5" value="b">
+            <input type="radio" name="q1" value="a">
+            <p><strong>OR</strong> are you trying to be <strong>MORE PROFESSIONALLY COMPETITIVE</strong> by learning extra "in-demand" languages?</p>
+            <input type="radio" name="q1" value="b">
+          </div>
+
+          <div>
+            <h4>Second Question</h4>
+            <p>
+              Which do you enjoy more?<br>
+              Building awesome devices and machines that may only be impressive to "the initiated" (like a perfectly tuned car engine)?
+            </p>
+            <input type="radio" name="q2" value="a">
+            <p><strong>OR</strong> do you prefer things with "wow factor" (as in an awesome car chasis + paint job)?</p>
+            <input type="radio" name="q2" value="b">
+          </div>
+                    
+          <div>
+            <h4>Third Question:</h4>
+            <p>
+              One of the major formative questions behind the construction of computer languages
+              is "how much do I want this language to guess at what I'm trying to do, and do it for me?"<br>
+              And the truth is, it can be problematic both ways. For example, take 'Garbage Collection' 
+            </p>
+            <p>
+              Garbage Collection is the term for a language that manages memory for you;
+              while this can be extraordinarily helpful (you don't have to think about memory address acquisition
+              and release) it can also be equally problematic: you may find that sometimes the language "guesses wrong"
+              about when you want to "forget" a variable, which can be difficult to diagnose/work around.
+            </p>
+            <p>Therefore, would you prefer that your language <strong>DOES</strong> try to be your 'personal assistant':</p>
+            <input type="radio" name="q3" value="a">
+            <p>Or do you prefer that it <strong>DOES NOT</strong>, and you must assign/manage everything personally/manually?</p>
+            <input type="radio" name="q3" value="b">
+          </div>
         </div>
-       
-        <div>
-          <h4>Last Question:</h4>
-          <p><strong>Flight?</strong></p>
-          <input type="radio" name="q6" value="a">
-          <p>or <strong>Invisibility</strong>?</p>
-          <input type="radio" name="q6" value="b">
+        
+        <div id="secondpage" class="hidden">
+          <div>
+            <h4>Fourth Question:</h4>
+            <p>
+              Learning/Implementation style. We will use furniture as an example for this one.<br>
+              Would you prefer: <br><strong>IKEA style</strong> furniture, where you are given exactly the pieces
+              and tools you need to build something specific?
+            </p>
+            <input type="radio" name="q4" value="a">
+            <p><strong>OR</strong> do you prefer designing your own furniture, <strong>and then</strong>
+              having to figure out how to build it with the tools at your disposal? (Or possibly even build/acquire new tools?)
+            </p>          
+            <input type="radio" name="q4" value="b">
+          </div>
+        
+          <div>
+            <h4>Fifth Question:</h4>
+            <p>Imagine you are managing a workshop. Which sounds more orderly?</p>
+            <p>At the beginning of the day, every employee makes a copy of every tool and takes it back to their workbench?</p>
+            <input type="radio" name="q5" value="a">
+            <p>
+              <strong>OR</strong> each tool has its place, and employees move from station to station?<br>
+              Note: for this question, assume no space conflicts; infinite employees can use the same station at a time.
+              </p>
+            <input type="radio" name="q5" value="b">
+          </div>
+        
+          <div>
+            <h4>Last Question:</h4>
+            <p><strong>Flight?</strong></p>
+            <input type="radio" name="q6" value="a">
+            <p>or <strong>Invisibility</strong>?</p>
+            <input type="radio" name="q6" value="b">
+          </div>
+        
+          <button class="btn" type="submit">Suggestions, please.</button>
         </div>
-       
-        <button class="btn" type="submit">Suggestions, please.</button>
       </form>
 
       <div>
@@ -115,6 +118,8 @@
 
     </div>
     
+    <button class="pagebutton">2nd Page</button>
+    <button class="pagebutton">1st Page</button>
     
   </body>
 </html>
