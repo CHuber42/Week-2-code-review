@@ -1,41 +1,116 @@
 $(document).ready(function(){
  $("form#survey").submit(function(event) {
-   event.preventDefault();
+  event.preventDefault();
 
-   var python = 0;
-   var ruby = 0;
-   var csharp = 0;
-   var swift = 0;
-   var javascript = 0;
-   var go = 0;
-   var rust = 0;
+  var python = 0;
+  var ruby = 0;
+  var csharp = 0;
+  var swift = 0;
+  var javascript = 0;
+  var go = 0;
+  var rust = 0;
 
-   var q1answer = $("input:radio[name=q1]:checked").val(); 
-   var q2answer = $("input:radio[name=q2]:checked").val();
-   var q3answer = $("input:radio[name=q3]:checked").val();
-   var q4answer = $("input:radio[name=q4]:checked").val();
-   var q5answer = $("input:radio[name=q5]:checked").val();
-   var q6answer = $("input:radio[name=q6]:checked").val();
+  var q1answer = $("input:radio[name=q1]:checked").val(); 
+  if (q1answer === "a"){
+    csharp += 1;
+    python += 1;
+    swift += 1;
+    rust += 1;
+  }
+  else if (q1answer === "b"){
+    javascript += 1;
+    python += 1;
+    go += 1;
+    ruby += 1;
+  }
+
+  var q2answer = $("input:radio[name=q2]:checked").val();
+  if (q2answer === "a"){
+    rust += 1;
+    python += 1;
+    csharp += 1;
+    ruby += 1;
+  }
+  else if (q2answer === "b"){
+    javascript += 1;
+    csharp += 1;
+    swift += 1;
+  }
+
+  var q3answer = $("input:radio[name=q3]:checked").val();
+  if (q3answer === "a"){
+    python += 1;
+    go += 1;
+    swift += 1;
+    ruby += 1;
+  }
+  else if (q3answer === "b"){
+    rust += 1;
+    javascript += 1;
+    csharp += 1;      
+  }
+  var q4answer = $("input:radio[name=q4]:checked").val();
+  if (q4answer === "a"){
+    swift += 1;
+    go += 1;
+    javascript += 1;
+    ruby += 1;
+  }
+  else if (q4answer === "b"){
+    csharp += 1;
+    python += 1;
+    rust += 1;
+  }
+
+  var q5answer = $("input:radio[name=q5]:checked").val();
+  if (q5answer === "a"){
+    ruby += 1;
+    python += 1;
+    csharp += 1;
+    go += 1;
+  }
+  else if (q5answer === "b"){
+    rust += 1;
+    javascript += 1;
+    swift += 1;
+  }
   
-   
+  var q6answer = $("input:radio[name=q6]:checked").val();
+  if (q6answer === "a"){
+    javascript += 1;
+    python += 1;
+    ruby += 1;
+  }
+  else if (q6answer === "b"){
+    csharp += 1;
+    swift += 1;
+    rust += 1;
+    go += 1;
+  }
 
-   var resultsArray = [python, ruby, csharp, swift, javascript, go, rust];
-   var resultsCounter = 0;
-   var highestValue = 6;
-   var trueResults = [];
+  
 
-   console.log(resultsArray);
+  var resultsArray = [python, ruby, csharp, swift, javascript, go, rust];
+  var highestValue = 6;
+  var trueResults = [];
 
-   while (resultsCounter > 3) {
-     for (i = 0; i < resultsArray.length; i++) {
-       if (resultsArray[i] === highestValue && resultsCounter < 3) {
-        trueResults.append(i);
-       }
+  console.log(resultsArray);
 
-     }
-     highestValue -= 1;
-   }
-   
+  while (trueResults.length < 3) {
+    for (i = 0; i < resultsArray.length; i++) {
+      alert("entered for loop, i = " + i + " resultsarray[i] = " + resultsArray[i] + " highestvalue = " + highestValue);
+      if ((resultsArray[i] === highestValue) && (trueResults.length < 3)) {
+      trueResults.push(i);
+     
+      }
+
+    }
+    
+    highestValue -= 1;
+  }
+  
+  
+
  });
 
 });
