@@ -1,6 +1,29 @@
+function pushResults(arrayHandler){
+  var resultsDestination = [];
+  var highestValue = 6;
+  
+  while (resultsDestination.length < 3) {
+    
+    for (i = 0; i < arrayHandler.length; i++) {
+      
+      if ((arrayHandler[i] === highestValue) && (resultsDestination.length < 3)) {
+        resultsDestination.push(i);  
+      }
+  
+    }    
+    highestValue -= 1;
+  } 
+
+return resultsDestination;
+}
+
+
+
+
 $(document).ready(function(){
  $("form#survey").submit(function(event) {
   event.preventDefault();
+  $("#results-presentation").removeClass("hidden");
 
   var python = 0;
   var ruby = 0;
@@ -91,22 +114,12 @@ $(document).ready(function(){
   
 
   var resultsArray = [python, ruby, csharp, swift, javascript, go, rust];
-  var highestValue = 6;
-  var trueResults = [];
+  var trueResults = pushResults(resultsArray);
 
-  console.log(resultsArray);
 
-  while (trueResults.length < 3) {
-    for (i = 0; i < resultsArray.length; i++) {
-      if ((resultsArray[i] === highestValue) && (trueResults.length < 3)) {
-        trueResults.push(i);
-     
-      }
 
-    }    
-    highestValue -= 1;
-  }
-  console.log(trueResults);
+  
+
   for (i = 0; i < 3; i++) {
     switch (trueResults[i]) {
       case 0:
@@ -143,3 +156,20 @@ $(document).ready(function(){
  });
 
 });
+
+
+
+
+
+
+
+while (trueResults.length < 3) {
+  for (i = 0; i < resultsArray.length; i++) {
+    if ((resultsArray[i] === highestValue) && (trueResults.length < 3)) {
+      trueResults.push(i);
+   
+    }
+
+  }    
+  highestValue -= 1;
+}
